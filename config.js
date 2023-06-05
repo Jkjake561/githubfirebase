@@ -18,7 +18,7 @@ const firebaseConfig = {
     auth.signInWithEmailAndPassword(email, password).then(cred=>{
         alert(cred.user + "has logged in")
     })
-    function singUp(){
+    function signUp(){
         email=document.getElementById("email").value;
         password=document.getElementById("password").value;
         auth.signInWithEmailAndPassword(email, password).then(cred=>{
