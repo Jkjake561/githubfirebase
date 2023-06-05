@@ -9,20 +9,19 @@ const firebaseConfig = {
     measurementId: "G-LVLWK48DT7"
   };
 
-  firebaseConfig.initializeApp(firebaseconfig);
+  firebaseConfig.initializeApp(firebaseConfig);
   const auth = firebase.auth();
-  const db = firebase.firestore();
   function login(){
     email=document.getElementById("email").value;
     password=document.getElementById("password").value;
     auth.signInWithEmailAndPassword(email, password).then(cred=>{
-        alert(cred.user + "has logged in")
+        alert(cred.user.email + "has logged in")
     })
 }
     function signUp(){
         email=document.getElementById("email").value;
         password=document.getElementById("password").value;
         auth.signInWithEmailAndPassword(email, password).then(cred=>{
-            alert(cred.user + "has signed up")
+            alert(cred.user.email + "has signed up")
     })
 }
