@@ -18,6 +18,7 @@ const firebaseConfig = {
     auth.signInWithEmailAndPassword(email, password).then(cred=>{
         alert(cred.user + "has logged in")
     })
+}
     function signUp(){
         email=document.getElementById("email").value;
         password=document.getElementById("password").value;
@@ -25,4 +26,3 @@ const firebaseConfig = {
             alert(cred.user + "has signed up")
     })
 }
-  }
