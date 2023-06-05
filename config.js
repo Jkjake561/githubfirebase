@@ -9,7 +9,7 @@ const firebaseConfig = {
     measurementId: "G-LVLWK48DT7"
   };
 
-  firebaseConfig.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
   function login(){
     email=document.getElementById("email").value;
@@ -21,7 +21,7 @@ const firebaseConfig = {
     function signUp(){
         email=document.getElementById("email").value;
         password=document.getElementById("password").value;
-        auth.signInWithEmailAndPassword(email, password).then(cred=>{
+        auth.createUserWithEmailAndPassword(email, password).then(cred=>{
             alert(cred.user.email + "has signed up")
     })
 }
