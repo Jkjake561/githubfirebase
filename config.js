@@ -15,13 +15,13 @@ const firebaseConfig = {
     email=document.getElementById("email").value;
     password=document.getElementById("password").value;
     auth.signInWithEmailAndPassword(email, password).then(cred=>{
-        alert(cred.user.email + "has logged in")
-    })
+        alert(cred.user.email + "has logged in");
+    });
 }
     function signUp(){
         email=document.getElementById("email").value;
         password=document.getElementById("password").value;
         auth.createUserWithEmailAndPassword(email, password).then(cred=>{
-            alert(cred.user.email + "has signed up")
-    })
+            alert(cred.user.email + "has signed up");
+    });
 }
